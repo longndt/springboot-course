@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Detail</title>
+</head>
+<body>
+<div layout:fragment="content" class="container col-md-5 text-center mt-4">
+    <h2 class="text text-primary mb-4">EMPLOYEE DETAIL</h2>
+    <div class="row bg-light">
+        <div class="col">
+            <img th:src="${employee.image}" width="200" height="200">
+        </div>
+        <div class="col">
+            <h1 class="text-success" th:text="${employee.name}" />
+            <h3 th:text="'Age: ' + ${employee.age}" />
+            <h3 th:text="'Address: ' + ${employee.address}" />
+            <h3 th:if="${employee.company != null}"
+                th:text="'Company: ' + ${employee.company.name}" />
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

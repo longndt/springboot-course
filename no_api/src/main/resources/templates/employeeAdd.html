@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+</head>
+<body>
+<div layout:fragment="content" class="container col-md-5 mt-4">
+    <div class="card">
+        <div class="card-body">
+            <form th:action="'/employee/save'" th:object="${employee}" method="post">
+                <h2 class="text-center text-primary">ADD EMPLOYEE</h2>
+                <fieldset class="form-group">
+                    <label>Employee name </label>
+                    <input class="form-control" type="text" th:field="*{name}">
+                    <p th:if="${#fields.hasErrors('name')}" th:errorclass="error" th:errors="*{name}" />
+                </fieldset>
+                <fieldset>
+                     <label>Employee age</label>
+                     <input class="form-control" type="number" th:field="*{age}">
+                    <p th:if="${#fields.hasErrors('age')}" th:errorclass="error" th:errors="*{age}" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Employee image </label>
+                    <input class="form-control" type="text" th:field="*{image}">
+                    <p th:if="${#fields.hasErrors('image')}" th:errorclass="error" th:errors="*{image}" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Employee address </label>
+                    <input class="form-control" type="text" th:field="*{address}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Company name </label>
+                    <select class="form-select" th:field="*{company}">
+                        <option th:each="comp : ${companies}" th:value="${comp.id}" th:text="${comp.name}" />
+                    </select>
+                </fieldset>
+                <div class="col text-center mt-3">
+                    <button type="submit" class="btn btn-success">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

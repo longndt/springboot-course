@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Company</title>
+</head>
+<body>
+<div layout:fragment="content" class="container col-md-5 mt-4">
+    <div class="card">
+        <div class="card-body">
+            <form th:action="'/company/save'" th:object="${company}" method="post">
+                <h2 class="text-center text-primary">ADD COMPANY</h2>
+                <fieldset class="form-group">
+                    <label>Company name </label>
+                    <input class="form-control" type="text" th:field="*{name}">
+                    <p th:if="${#fields.hasErrors('name')}" th:errorclass="error" th:errors="*{name}" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Company image </label>
+                    <input class="form-control" type="text" th:field="*{image}">
+                    <p th:if="${#fields.hasErrors('image')}" th:errorclass="error" th:errors="*{image}" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Company address </label>
+                    <input class="form-control" type="text" th:field="*{address}">
+                    <p th:if="${#fields.hasErrors('address')}" th:errorclass="error" th:errors="*{address}" />
+                </fieldset>
+                <div class="col text-center mt-3">
+                    <button type="submit" class="btn btn-success">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
