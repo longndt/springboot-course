@@ -31,7 +31,7 @@
 
 - Create table with Hibernate
 
-- Implement CRUD feature with JPA
+- Implement CRUD features with JPA
 
 - Create view for web with Thymeleaf
 ### Lab 2:  
