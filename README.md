@@ -3,13 +3,15 @@
 ## 1. Techniques:
 - Java: backend language
 
-- Spring Boot: backend framework
+- Spring Boot: Java framework
 
 - Thymeleaf: view engine
 
 - Bootstrap: CSS framework
 
 - MySQL: database
+
+- ReactJS: frontend framework
 ## 2. Softwares:
 - JDK: software development kit
 
