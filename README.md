@@ -1,9 +1,9 @@
-# Java Spring Boot Course
+# Java Spring Boot Course - LongNDT
 
 ## 1. Techniques:
-- Java: back-end language
+- Java: backend language
 
-- Spring Boot: back-end framework
+- Spring Boot: backend framework
 
 - Thymeleaf: view engine
 
@@ -11,21 +11,19 @@
 
 - MySQL: database
 ## 2. Softwares:
-- JDK: Java Development Kit
+- JDK: software development kit
 
 - IntelliJ: IDE
-
-- NodeJS: back-end
 
 - Tomcat: web server
 
 - MySQL Community Server : database server
 
-- MySQL Workbench : Database management tool
+- MySQL Workbench : database management tool
 
 - Postman: API testing tool
 
-## 3. Schedule:
+## 3. Syllabus:
 ### Lab 1:  
 - Create Java Spring Boot project in IntelliJ with autoconfiguration
 
@@ -37,15 +35,17 @@
 ### Lab 2:  
 - Setup system authentication using Spring Security
 
-- Make data validation using Hibernate Validator and display form input error using Thymeleaf
+- Make data validation using Hibernate Validator 
 
-- Establish web template using Thymeleaf layout dialect
+- Display form input error using Thymeleaf
+
+- Setup web template using Thymeleaf layout dialect
 ### Lab 3:  
 - Setup entity relationship for filtering data
 
 - Implement extra features: Search + Sort
 ### Lab 4:  
-- Create API with Java Spring Boot (backend)
+- Create API with Spring Boot (backend)
  
 ### Lab 5:  
 - Consume API with ReactJS (frontend)
