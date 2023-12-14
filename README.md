@@ -3,13 +3,15 @@
 ## 1. Techniques:
 - Java: backend language
 
-- Spring Boot: backend framework
+- Spring Boot: Java framework
 
 - Thymeleaf: view engine
 
 - Bootstrap: CSS framework
 
 - MySQL: database
+
+- ReactJS: frontend framework
 ## 2. Softwares:
 - JDK: software development kit
 
@@ -32,6 +34,7 @@
 - Implement CRUD features with JPA
 
 - Create view for web with Thymeleaf
+
 ### Lab 2:  
 - Setup system authentication using Spring Security
 
@@ -40,10 +43,12 @@
 - Display form input error using Thymeleaf
 
 - Setup web template using Thymeleaf layout dialect
+
 ### Lab 3:  
 - Setup entity relationship for filtering data
 
 - Implement extra features: Search + Sort
+
 ### Lab 4:  
 - Create API with Spring Boot (backend)
  
