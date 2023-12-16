@@ -1,7 +1,7 @@
 # Java Spring Boot Course - LongNDT
 
 ## 1. Techniques:
-- Java: backend language
+- Java: backend
 
 - Spring Boot: Java framework
 
@@ -11,7 +11,7 @@
 
 - MySQL: database
 
-- ReactJS: frontend framework
+- ReactJS: frontend 
 ## 2. Softwares:
 - JDK: software development kit
 
