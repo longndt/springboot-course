@@ -19,11 +19,10 @@
             <h3 th:text="'Employee List:'" />
             <h4 th:each="employee: ${employees}">
                 <a class="text-decoration-none" th:href="'/employee/' + ${employee.id}"
-                   th:if="(${employee.company.getId()} == ${company.id})" th:text="${employee.name}" />
+                   th:if="${employee.company?.getId() == company.id}" th:text="${employee.name}" />
             </h4>
         </div>
     </div>
 </div>
 </body>
 </html>
-
