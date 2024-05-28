@@ -45,9 +45,9 @@
 - Setup web template using Thymeleaf layout dialect
 
 ### Lab 3:
-- Setup entity relationship for filtering data
+- Setup relationship between entities (tables)
 
-- Implement extra features: Search + Sort
+- Implement extra features: Filter, Search, Sort
 
 ### Lab 4:
 - Create API with Spring Boot
