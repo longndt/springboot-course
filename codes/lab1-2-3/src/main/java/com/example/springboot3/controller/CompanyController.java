@@ -34,7 +34,7 @@ public class CompanyController {
     public String getCompanyById(
             @PathVariable(value = "id") Long id, Model model) {
         Company company = companyRepository.getById(id);
-        List<Employee> employees = employeeRepository.findAll();
+        List<Employee> employees = employeeRepository.findByCompanyId(id);
         model.addAttribute("employees", employees);
         model.addAttribute("company", company);
         return "companyDetail";
