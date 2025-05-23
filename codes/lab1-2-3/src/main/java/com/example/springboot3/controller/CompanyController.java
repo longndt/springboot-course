@@ -73,8 +73,16 @@ public class CompanyController {
 
     @RequestMapping(value = "/delete/{id}")
     public String deleteCompany(
-            @PathVariable(value = "id") Long id) {
+            @PathVariable(value = "id") Long id, Model model) {
         Company company = companyRepository.getById(id);
+        List<Employee> employees = employeeRepository.findByCompanyId(id);
+
+        if (!employees.isEmpty()) {
+            model.addAttribute("error", "Cannot delete company. Please remove all employees first.");
+            model.addAttribute("companies", companyRepository.findAll());
+            return "companyList";
+        }
+
         companyRepository.delete(company);
         return "redirect:/company/list";
     }

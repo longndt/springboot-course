@@ -9,6 +9,11 @@
 <body>
 <div layout:fragment="content" class="container col-md-5 text-center mt-4">
     <h2 class="text text-primary">COMPANY LIST</h2>
+
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <span th:text="${error}"></span>
+    </div>
+
     <a th:href="'/company/add'" class="mt-3 mb-3">
         <img th:src="@{/images/add.png} "/>
     </a>
@@ -49,5 +54,4 @@
 </div>
 </body>
 </html>
-
 
