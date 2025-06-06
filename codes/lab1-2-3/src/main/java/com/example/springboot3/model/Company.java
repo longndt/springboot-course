@@ -20,6 +20,14 @@ public class Company {
 
     //auto generated getter & setter
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -42,13 +50,5 @@ public class Company {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 }

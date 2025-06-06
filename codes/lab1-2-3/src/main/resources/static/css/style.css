@@ -4,4 +4,6 @@
     font-style: italic;
     margin-top: 3px;
     text-align: center;
+    border: 3px solid yellow;
+    background: lime;
 }
