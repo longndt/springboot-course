@@ -17,7 +17,7 @@ const StudentAdd = ({ reloadStudentList }) => {
         }));
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const student = {
@@ -25,13 +25,18 @@ const StudentAdd = ({ reloadStudentList }) => {
             age: formData.age
         };
 
-        axios.post(url + 'add', student)
-            .then(res => {
-                console.log(res);
-                reloadStudentList();
-                setFormData({ name: '', age: '' });
-                event.target.reset();
-            });
+        try {
+            const res = await axios.post(url + 'add', student);
+            console.log(res);
+            // Reset form first
+            setFormData({ name: '', age: '' });
+            event.target.reset();
+            // Then trigger reload
+            reloadStudentList();
+        } catch (error) {
+            console.error('Error adding student:', error);
+            // You might want to show an error message to the user here
+        }
     };
 
     return (

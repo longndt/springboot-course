@@ -12,27 +12,27 @@ const StudentList = ({ reloadList }) => {
         });
     };
 
+    // Initial load
     useEffect(() => {
         fetchStudentList();
     }, []);
 
+    // Reload when reloadList prop changes
     useEffect(() => {
-        if (reloadList) {
-            fetchStudentList();
-        }
+        fetchStudentList();
     }, [reloadList]);
 
     const handleDelete = (id) => {
         axios.delete(url + `delete/${id}`).then(res => {
             console.log(res);
-            fetchStudentList();
+            fetchStudentList(); // Direct reload after delete
         });
     };
 
     const handleUpdate = (id, updatedStudent) => {
         axios.put(url + `update/${id}`, updatedStudent).then(res => {
             console.log(res);
-            fetchStudentList();
+            fetchStudentList(); // Direct reload after update
         });
     };
 
